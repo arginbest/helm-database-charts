@@ -1,0 +1,6 @@
+annotations:
+  category: Database
+apiVersion: v1
+appVersion: 6.0.8
+version: 10.9.0
+name: redis
