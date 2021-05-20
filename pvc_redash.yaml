@@ -1,0 +1,142 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/gce-pd
+    creationTimestamp: "2021-05-19T22:22:35Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app: postgresql
+      release: mytest
+      role: master
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:release: {}
+            f:role: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+          f:volumeName: {}
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2021-05-19T22:22:37Z"
+    name: data-mytest-postgresql-0
+    namespace: default
+    resourceVersion: "3619768"
+    selfLink: /api/v1/namespaces/default/persistentvolumeclaims/data-mytest-postgresql-0
+    uid: 31902e71-c5cd-49b0-8b53-fdaa405c058c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 10Gi
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-31902e71-c5cd-49b0-8b53-fdaa405c058c
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 10Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/gce-pd
+    creationTimestamp: "2021-05-19T22:22:35Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app: redis
+      component: master
+      heritage: Helm
+      release: mytest
+      role: master
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:component: {}
+            f:heritage: {}
+            f:release: {}
+            f:role: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+          f:volumeName: {}
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2021-05-19T22:22:37Z"
+    name: redis-data-mytest-redis-master-0
+    namespace: default
+    resourceVersion: "3619772"
+    selfLink: /api/v1/namespaces/default/persistentvolumeclaims/redis-data-mytest-redis-master-0
+    uid: f1004036-1847-4267-8950-5e5166fa9eb1
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 8Gi
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-f1004036-1847-4267-8950-5e5166fa9eb1
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    phase: Bound
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
